@@ -1,7 +1,7 @@
 # Context
 
 In React the state lives inside a component but in some cases you have some values that should be shared across the whole application.
-The logged user is one example. Others could be feature flags `history`, `location` and locale information. Everywhere in your app you know that those things exist and you need an easy way to access them.
+The logged user is one example. Others could be feature flags `history`, `location` and locale information. Everywhere in your app you know that these things exist and you need an easy way to access them.
 
 Until now we were putting this values in our root component `<App>` and passing them down with props. This often meant drilling a prop several layers. What's worse, often times the components in between didn't care about that particular value, they were only "carrying it over".
 

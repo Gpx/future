@@ -80,7 +80,7 @@ function DoubleComponent(props) {
 
 // The following will render <div>10</div>
 <DoubleComponent value={5}>
-  {({ double }) => <div>{double}</div>}>}
+  {({ double }) => <div>{double}</div>}
 </DoubleComponent>
 ```
 
@@ -96,7 +96,9 @@ class FooContainer extends React.Component {
 }
 ```
 
-What we have now is a component that handles a state and knows how to modify it but can be used everywhere. We can modify `<Foo>` to use our new state:
+What we have now is a component that handles a state and knows how to modify it but can be used anywhere.
+
+We can modify `<Foo>` to use our new state:
 
 ```jsx
 function Foo(props) {
@@ -127,4 +129,6 @@ function Bar(props) {
 Now components are choosing which state they need and they can easily access it rather than the other way around.
 
 ## Naming
+
+Althought the examples use "Container" as suffix "State" is probably a better name for us. So, instead of `FooContainer` it's better to have `FooState`. The reason is simply to differentiate this new pattern from what we used to do before.
 
